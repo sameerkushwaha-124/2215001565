@@ -10,13 +10,13 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Define a route for the root URL
 app.get("/evaluation-services/users", async (req, res) => {
-  const response = await fetch('https://20.244.56.144/evaluation-services/users');
+  const response = await fetch('http://20.244.56.144/evaluation-services/users');
   const data = await response.json();
   res.send(data);
 });
 
 app.get('/evaluation-services/users/:userId/posts', (req,res)=>{
-  const response = fetch(`https://20.244.56.144/evaluation-services/users/${req.params.userId}/posts`);
+  const response = fetch(`http://20.244.56.144/evaluation-services/users/${req.params.userId}/posts`);
   const data = response.json();
   res.send(data);
 })
