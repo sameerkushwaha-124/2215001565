@@ -22,7 +22,7 @@ app.get('/evaluation-services/users/:userId/posts', (req,res)=>{
 })
 
 app.get('/evaluations-services/posts:postId/comments', async(req,res)=>{
-  const response = await fetch(`https://20.244.56.144/evaluation-services/posts/${req.params.postId}/comments`);
+  const response = await fetch(`http://20.244.56.144/evaluation-services/posts/${req.params.postId}/comments`);
   const data = await response.json();
   res.send(data);
 })
